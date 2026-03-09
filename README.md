@@ -12,7 +12,7 @@ The dataset is loaded using:
 ```python
 import pandas as pd
 DATA_URL = "https://raw.githubusercontent.com/jaomaijm/MSIN0097_Code_WCXK2/main/bank-full.csv"
-df = pd.read_csv(DATA_URL, sep=";")
+df = pd.read_csv(DATA_URL, sep=";")```
 
 ## Project Structure
 bank-marketing-project/
@@ -28,7 +28,7 @@ bank-marketing-project/
 ├── appendix/
 │   └── agent_usage_log.md         # Agent Usage Log + Decision Register
 └── fig_*.png                      # Generated figures (18 total)
-```
+
 
 ## How to Run
 
