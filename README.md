@@ -12,9 +12,9 @@ The dataset is loaded using:
 ```python
 import pandas as pd
 DATA_URL = "https://raw.githubusercontent.com/jaomaijm/MSIN0097_Code_WCXK2/main/bank-full.csv"
-df = pd.read_csv(DATA_URL, sep=";")
+df = pd.read_csv(DATA_URL, sep=";")```
 ## Project Structure
-bank-marketing-project/
+```bank-marketing-project/
 ├── Bank_Marketing_Analysis.ipynb  # Main analysis notebook (90 cells, executed)
 ├── report.pdf                     # ~2000-word report with model card + appendix
 ├── build_notebook.py              # Notebook generation script
