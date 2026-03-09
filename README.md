@@ -24,15 +24,11 @@ df = pd.read_csv(DATA_URL, sep=";")
 bank-marketing-project/
 ├── Bank_Marketing_Analysis.ipynb  # Main analysis notebook (90 cells, executed)
 ├── report.pdf                     # ~2000-word report with model card + appendix
-├── build_notebook.py              # Notebook generation script
-├── generate_report.py             # Report PDF generation script
 ├── requirements.txt               # Python dependencies (pip)
 ├── environment.yml                # Conda environment (Python 3.11)
 ├── README.md                      # This file
 ├── tests/
 │   └── test_pipeline.py           # Standalone validation test suite
-├── appendix/
-│   └── agent_usage_log.md         # Agent Usage Log + Decision Register
 └── fig_*.png                      # Generated figures (18 total)
 ```
 
