@@ -8,11 +8,14 @@ This project builds an end-to-end predictive analytics pipeline to predict wheth
 - **File**: `bank-full.csv` (45,211 records, 17 features, semicolon-delimited)
 - **Target**: `y` — whether the client subscribed to a term deposit (`yes` / `no`)
 - For reproducibility, the dataset is loaded directly from the repository using a raw GitHub link rather than storing a local copy in the execution environment.
-
+The dataset is loaded using:
+```python
+import pandas as pd
+DATA_URL = "https://raw.githubusercontent.com/jaomaijm/MSIN0097_Code_WCXK2/main/bank-full.csv"
+df = pd.read_csv(DATA_URL, sep=";")
 ## Project Structure
 ```
 bank-marketing-project/
-├── bank-full.csv                  # Dataset
 ├── Bank_Marketing_Analysis.ipynb  # Main analysis notebook (90 cells, executed)
 ├── report.pdf                     # ~2000-word report with model card + appendix
 ├── build_notebook.py              # Notebook generation script
