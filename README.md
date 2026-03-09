@@ -7,6 +7,7 @@ This project builds an end-to-end predictive analytics pipeline to predict wheth
 - **Source**: [UCI Machine Learning Repository — Bank Marketing](https://archive.ics.uci.edu/ml/datasets/bank+marketing)
 - **File**: `bank-full.csv` (45,211 records, 17 features, semicolon-delimited)
 - **Target**: `y` — whether the client subscribed to a term deposit (`yes` / `no`)
+- For reproducibility, the dataset is loaded directly from the repository using a raw GitHub link rather than storing a local copy in the execution environment.
 
 ## Project Structure
 ```
