@@ -8,13 +8,19 @@ This project builds an end-to-end predictive analytics pipeline to predict wheth
 - **File**: `bank-full.csv` (45,211 records, 17 features, semicolon-delimited)
 - **Target**: `y` — whether the client subscribed to a term deposit (`yes` / `no`)
 - For reproducibility, the dataset is loaded directly from the repository using a raw GitHub link rather than storing a local copy in the execution environment.
+
 The dataset is loaded using:
+
 ```python
 import pandas as pd
+
 DATA_URL = "https://raw.githubusercontent.com/jaomaijm/MSIN0097_Code_WCXK2/main/bank-full.csv"
 df = pd.read_csv(DATA_URL, sep=";")
+```
 
 ## Project Structure
+
+```text
 bank-marketing-project/
 ├── Bank_Marketing_Analysis.ipynb  # Main analysis notebook (90 cells, executed)
 ├── report.pdf                     # ~2000-word report with model card + appendix
@@ -28,7 +34,7 @@ bank-marketing-project/
 ├── appendix/
 │   └── agent_usage_log.md         # Agent Usage Log + Decision Register
 └── fig_*.png                      # Generated figures (18 total)
-
+```
 
 ## How to Run
 
@@ -37,13 +43,15 @@ Download all files to a local directory.
 
 ### 2. Set Up the Environment
 
-**Option A — Conda (recommended for reproducibility)**:
+**Option A — Conda (recommended for reproducibility)**
+
 ```bash
 conda env create -f environment.yml
 conda activate bank-marketing
 ```
 
-**Option B — pip + venv**:
+**Option B — pip + venv**
+
 ```bash
 python3 -m venv venv
 source venv/bin/activate        # macOS / Linux
@@ -53,10 +61,13 @@ pip install -r requirements.txt
 ```
 
 ### 3. Run the Notebook
+
 ```bash
 jupyter notebook Bank_Marketing_Analysis.ipynb
 ```
-Run all cells sequentially. The notebook is self-contained and will:
+
+Run all cells sequentially. The notebook will:
+
 - Load and explore the data
 - Preprocess features and split into train/validation/test sets
 - Train and compare multiple models (Logistic Regression, Random Forest, XGBoost, LightGBM, Neural Network)
@@ -65,21 +76,33 @@ Run all cells sequentially. The notebook is self-contained and will:
 - Output final evaluation metrics and visualisations
 
 ### 4. Run Validation Tests
+
 ```bash
 python tests/test_pipeline.py
 ```
-The test suite validates data integrity, preprocessing correctness (including leakage detection), model sanity checks, and output file existence. All 45 test assertions should pass.
+
+The test suite validates:
+
+- data integrity
+- preprocessing correctness (including leakage detection)
+- model sanity checks
+- output file existence
+
+All **45 test assertions** should pass.
 
 ### 5. View the Report
+
 Open `report.pdf` for the ~2,000-word analytical report including a model card and appendix.
 
 ## Requirements
-- Python 3.11+ (pinned in `environment.yml`)
+
+- Python **3.11+** (pinned in `environment.yml`)
 - See `requirements.txt` for all pip dependencies
 - See `environment.yml` for full conda environment specification
 
 ## Reproducibility
+
 - Random seeds are set throughout (`RANDOM_STATE = 42`) for reproducibility
-- All preprocessing is implemented via scikit-learn ColumnTransformer pipelines
-- Train/validation/test split ratios: 60/20/20 with stratified sampling
+- All preprocessing is implemented via **scikit-learn ColumnTransformer pipelines**
+- Train/validation/test split ratios: **60/20/20 with stratified sampling**
 - Environment reproducible via `environment.yml` (conda) or `requirements.txt` (pip)
